@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.I.D Knowledge Transfer Session</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Inter:wght@400;700&family=Noto+Sans+KR:wght@300;500;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #facc15;
+            --bg-dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .accent-font {
+            font-family: 'Black Han Sans', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border: 1px solid rgba(37, 99, 235, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.2), transparent),
+                radial-gradient(circle at bottom left, rgba(249, 115, 22, 0.1), transparent);
+        }
+
+        .objection-anim {
+            animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both infinite;
+        }
+
+        @keyframes shake {
+
+            10%,
+            90% {
+                transform: translate3d(-1px, 0, 0) rotate(-5deg);
+            }
+
+            20%,
+            80% {
+                transform: translate3d(2px, 0, 0) rotate(-3deg);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-4px, 0, 0) rotate(-6deg);
+            }
+
+            40%,
+            60% {
+                transform: translate3d(4px, 0, 0) rotate(-4deg);
+            }
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+        }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .map-hubble-highlight {
+            animation: pulse-map 2s infinite;
+        }
+
+        @keyframes pulse-map {
+            0% {
+                fill: #ef4444;
+                opacity: 0.6;
+            }
+
+            50% {
+                fill: #f87171;
+                opacity: 1;
+            }
+
+            100% {
+                fill: #ef4444;
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+
+<body class="hero-gradient grid-bg">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center pt-20 pb-32 px-4">
+        <div class="absolute inset-0 z-0 opacity-80 overflow-hidden">
+            <img src="./assets/scene_1.png" alt="나루호도 배경" class="absolute -left-0 bottom-0 w-[600px] grayscale">
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div
+                class="inline-block mb-4 px-4 py-1 border border-blue-500 rounded-full bg-blue-500/10 text-blue-400 font-bold text-sm tracking-widest uppercase">
+                S.I.D Expedition 2024
+            </div>
+
+            <div class="flex justify-center mb-8">
+                <img src="./assets/text.png" alt="이의있소!"
+                    class="w-72 objection-anim drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
+            </div>
+
+            <h1 class="accent-font text-6xl md:text-8xl mb-6 text-glow leading-tight">
+                단순 발표는 <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 italic font-black">기각한다!</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">
+                이론과 실습, 게임을 넘나드는 <span class="text-white font-bold border-b-2 border-yellow-400">S.I.D 원정대의 정예 전수
+                    세션</span>
+            </p>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 -mt-20">
+
+        <!-- Schedule Quick Look -->
+        <div class="grid md:grid-cols-2 gap-6 mb-20">
+            <div class="glass-card rounded-3xl p-8 border-l-4 border-blue-500">
+                <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">FRONTEND SESSION</span>
+                <div class="text-4xl accent-font mt-2">11:20 - 12:10</div>
+                <p class="text-slate-400 mt-2">오전 지식의 전수</p>
+            </div>
+            <div class="glass-card rounded-3xl p-8 border-l-4 border-indigo-500">
+                <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">BACKEND SESSION</span>
+                <div class="text-4xl accent-font mt-2">15:00 - 15:50</div>
+                <p class="text-slate-400 mt-2">오후 지식의 이식</p>
+            </div>
+        </div>
+
+        <!-- Curriculum Tiles -->
+        <h3 class="accent-font text-4xl text-center mb-12">전수 커리큘럼</h3>
+        <div class="grid md:grid-cols-3 gap-8 mb-24">
+            <!-- 비비빙 -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col group">
+                <div class="text-blue-400 text-xs font-black mb-4 tracking-tighter uppercase italic">Phase 1. Concept
+                </div>
+                <h4 class="accent-font text-2xl mb-4 group-hover:text-blue-400 transition-colors">비비빙 : SID 기본 개념</h4>
+                <p class="text-slate-400 leading-relaxed mb-6 flex-grow">
+                    복잡한 SID 구조를 가장 직관적인 <span class="text-white font-medium">예제와 시각화</span>를 통해 쉽고 명확하게 전수합니다.
+                </p>
+                <div class="bg-slate-800/50 p-3 rounded-xl text-sm font-bold text-center">⏱ 15분 전수</div>
+            </div>
+
+            <!-- 콘티 -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col border-t-2 border-yellow-500/50 group">
+                <div class="text-yellow-500 text-xs font-black mb-4 tracking-tighter uppercase italic">Phase 2.
+                    Experience</div>
+                <h4 class="accent-font text-2xl mb-4 group-hover:text-yellow-500 transition-colors">콘티 : 게임 기반 전수</h4>
+                <p class="text-slate-400 leading-relaxed mb-6 flex-grow">
+                    <span class="text-white font-medium">로또와 블랙잭</span> 게임을 기반으로 S, I, D 원칙을 몸소 체험하는 다이나믹 세션입니다.
+                </p>
+                <div class="bg-yellow-500/10 p-3 rounded-xl text-sm font-bold text-center text-yellow-500">⏱ 20분 전수
+                </div>
+            </div>
+
+            <!-- 먼지 -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col group">
+                <div class="text-purple-400 text-xs font-black mb-4 tracking-tighter uppercase italic">Phase 3. Analysis
+                </div>
+                <h4 class="accent-font text-2xl mb-4 group-hover:text-purple-400 transition-colors">먼지 : 케이스 스터디</h4>
+                <p class="text-slate-400 leading-relaxed mb-6 flex-grow">
+                    책 속의 추상적인 이론을 실제 <span class="text-white font-medium">실무 예시</span>로 치환하여 깊이 있게 토론하고 정리합니다.
+                </p>
+                <div class="bg-slate-800/50 p-3 rounded-xl text-sm font-bold text-center">⏱ 15분 전수</div>
+            </div>
+        </div>
+
+        <!-- Venue Section (SVG Map) -->
+        <section class="mb-24">
+            <h3 class="accent-font text-4xl text-center mb-12">장소 안내</h3>
+            <div class="glass-card rounded-[3rem] p-8 md:p-12 overflow-hidden">
+                <div class="grid lg:grid-cols-5 gap-12 items-center">
+                    <div class="lg:col-span-2 space-y-6">
+                        <div
+                            class="bg-red-500/10 border border-red-500/50 inline-block px-4 py-1 rounded-full text-red-400 font-bold text-sm">
+                            Target Location</div>
+                        <h4 class="accent-font text-5xl">허블 (Hubble)</h4>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            원정대원들이 지식을 나눌 최적의 장소, <br>
+                            <span class="text-white font-bold">오른쪽 상단 끝</span>에 위치한 **허블 룸**으로 집결하세요!
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <span class="w-2 h-2 bg-red-500 rounded-full map-hubble-highlight"></span>
+                                지도에 표시된 붉은 영역입니다.
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                라이브러리 반대편 복도 끝 위치
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-3 bg-slate-800/50 rounded-2xl p-4 border border-white/5">
+                        <!-- SVG Map Rendering -->
+                        <svg viewBox="0 0 800 500" class="w-full h-auto rounded-lg shadow-2xl"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background -->
+                            <rect width="800" height="500" fill="#1e293b" rx="8" />
+
+                            <!-- Rooms Layout -->
+                            <!-- 라이브러리 -->
+                            <rect x="80" y="30" width="350" height="150" fill="#4ade80" fill-opacity="0.2"
+                                stroke="#4ade80" stroke-width="2" />
+                            <text x="255" y="110" fill="#4ade80" font-family="Noto Sans KR" font-weight="bold"
+                                text-anchor="middle">라이브러리</text>
+
+                            <!-- 코워킹 존 -->
+                            <rect x="80" y="250" width="150" height="180" fill="#4ade80" fill-opacity="0.2"
+                                stroke="#4ade80" stroke-width="2" />
+                            <text x="155" y="340" fill="#4ade80" font-family="Noto Sans KR" font-weight="bold"
+                                text-anchor="middle">코워킹 존</text>
+
+                            <!-- 출입구 -->
+                            <rect x="250" y="250" width="380" height="180" fill="#cbd5e1" fill-opacity="0.1"
+                                stroke="#cbd5e1" stroke-width="2" />
+                            <text x="440" y="340" fill="#cbd5e1" font-family="Noto Sans KR" font-weight="bold"
+                                text-anchor="middle">출입구/로비</text>
+
+                            <!-- 룸 섹션들 -->
+                            <rect x="480" y="30" width="80" height="90" fill="#f87171" fill-opacity="0.2"
+                                stroke="#f87171" stroke-width="1" />
+                            <text x="520" y="75" fill="#f87171" font-size="12" text-anchor="middle">보이저</text>
+
+                            <rect x="480" y="120" width="80" height="60" fill="#f87171" fill-opacity="0.2"
+                                stroke="#f87171" stroke-width="1" />
+                            <text x="520" y="150" fill="#f87171" font-size="12" text-anchor="middle">아폴로</text>
+
+                            <rect x="580" y="30" width="80" height="90" fill="#f87171" fill-opacity="0.2"
+                                stroke="#f87171" stroke-width="1" />
+                            <text x="620" y="75" fill="#f87171" font-size="12" text-anchor="middle">디스커버리</text>
+
+                            <!-- 허블 (Target) -->
+                            <rect x="580" y="120" width="80" height="60" fill="#ef4444" class="map-hubble-highlight"
+                                stroke="#ffffff" stroke-width="3" />
+                            <text x="620" y="150" fill="#ffffff" font-weight="bold" font-size="14"
+                                text-anchor="middle">허블</text>
+
+                            <!-- 우측 시설 -->
+                            <rect x="680" y="30" width="100" height="150" fill="#94a3b8" fill-opacity="0.1"
+                                stroke="#94a3b8" stroke-width="1" />
+                            <text x="730" y="105" fill="#94a3b8" font-size="12" text-anchor="middle">공조실</text>
+
+                            <!-- 하단 룸들 -->
+                            <rect x="80" y="440" width="220" height="50" fill="#60a5fa" fill-opacity="0.2"
+                                stroke="#60a5fa" stroke-width="1" />
+                            <text x="190" y="470" fill="#60a5fa" font-size="12" text-anchor="middle">작은 강의실</text>
+
+                            <rect x="580" y="440" width="100" height="50" fill="#94a3b8" fill-opacity="0.1"
+                                stroke="#94a3b8" stroke-width="1" />
+                            <text x="630" y="470" fill="#94a3b8" font-size="12" text-anchor="middle">코치룸</text>
+
+                            <!-- 안내 화살표 애니메이션 -->
+                            <path d="M 440 300 Q 550 300 580 160" stroke="#facc15" stroke-width="3" fill="none"
+                                stroke-dasharray="8,8" class="animate-pulse" />
+                            <circle cx="580" cy="160" r="5" fill="#facc15" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <div class="text-center pb-32">
+            <h2 class="accent-font text-3xl mb-8">성장을 향한 원정대에 합류하시겠습니까?</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl accent-font text-xl transition-all shadow-lg hover:-translate-y-1">
+                    프론트엔드 전수 참여
+                </button>
+                <button
+                    class="bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-5 rounded-2xl accent-font text-xl transition-all shadow-lg hover:-translate-y-1">
+                    백엔드 전수 참여
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-12 text-center border-t border-white/5 bg-black/40">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="accent-font text-xl text-blue-500 mb-2">S.I.D EXPEDITION</h2>
+            <p class="text-slate-600 text-xs uppercase tracking-widest">© 2024 Design by Gemini | All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
